@@ -1,12 +1,12 @@
 # Keep names in variables
-$computername = "DC-A"
-$zonename = "extstaging.local"
+$computername = "computer-name"
+$zonename = "zone.name"
 
 # Collect all DNS records from the machine in a variable
 $machineRecords = Get-DnsServerResourceRecord -ZoneName $zonename
 
 # Read records to be modified from csv
-$InputFile = "C:\Users\mbandlamudi\Desktop\dnsrecords.csv"
+$InputFile = "C:\Users\username\Desktop\dnsrecords.csv"
 $csvRecords = Import-CSV $InputFile
 
 # EDIT/ADD Records
@@ -49,7 +49,7 @@ ForEach ($csvRecord in $csvRecords){
                 # Change CNAME on the new object
                 $NewObj.RecordData.HostNameAlias = $csvRecord.value
 
-                # Need to figure out how to modify the ttl
+                # Set ttl
                 $NewObj.TimeToLive = [System.TimeSpan]::FromSeconds($csvRecord.ttl)
 
                 # Update record on the server
@@ -61,7 +61,6 @@ ForEach ($csvRecord in $csvRecords){
 
     # ADD
     # Check if found flag is true/false | If record not found in the server then create
-
     If (-Not $foundRecord){
         # A record
         If ($csvRecord.type -eq "A"){
