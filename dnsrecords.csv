@@ -1,0 +1,11 @@
+name,type,value,ttl
+EC2AMAZ-FCLV0B2,A,10.180.12.12,1600
+EC2AMAZ-EV4ISMP,A,10.180.13.13,1600
+EC2AMAZ-EJG1GFP,A,10.182.13.14,1600
+ABCDEFG-A,A,10.181.11.31,1200
+WIN-VF6EL5I8ULA,A,10.181.33.24,1200
+ABCDEFG-B,CNAME,elb-internal-rabbit-broker-85a9fe2b2fe585a9.elb.us-west-2.amazonaws.c.,3600
+ABCDEFG-C,CNAME,elb-internal-rabbit-broker-85a9fe2b2fe585a9.elb.us-west-2.amazonaws.u.,1600
+ABCDEFG-D,A,10.182.13.12,4600
+ABCDEFG-E,CNAME,elb-internal-rabbit-broker-85a9fe2b2fe585a9.elb.us-west-2.amazonaws.com.,2600
+ABCDEFG-F,A,10.182.15.15,4600
