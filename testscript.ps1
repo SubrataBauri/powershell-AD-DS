@@ -1,7 +1,7 @@
 $delete=$args[0] # save argument if sent as paramer
 
-# Keep names in variables
-$computername = "DC-A"
+$computername = "computer-name"
+$zonename = "zone.name"
 
 # Read records to be modified from csv
 $InputFile = "C:\Users\username\Desktop\dnsrecords.csv"
