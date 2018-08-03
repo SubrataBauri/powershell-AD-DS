@@ -93,5 +93,4 @@ foreach ($machineRecord in $machineRecords) {
 }
 
 # Export Data to CSV File named data.csv
-$results | Select-Object name,zonename,type,value,ttl,priority,weight,port,domainname,minimumttl,expirelimit,primaryserver,refreshinterval,responsibleperson,retrydelay,serialnumber | Export-Csv -Path "C:\Users\username\Desktop\data.csv" -NoTypeInformation
-
+$results | Select-Object name,zonename,type,value,ttl,priority,weight,port,domainname,minimumttl,expirelimit,primaryserver,refreshinterval,responsibleperson,retrydelay,serialnumber | Export-Csv -Path "C:\Users\user\Desktop\data.csv" -NoTypeInformation
