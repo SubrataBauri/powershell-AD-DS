@@ -1,4 +1,4 @@
-$delete=$args[0] # save argument if sent as paramer
+$delete=$args[0] # capture argument if sent as paramer
 
 $computername = "computer-name"
 $zonename = "zone.name"
